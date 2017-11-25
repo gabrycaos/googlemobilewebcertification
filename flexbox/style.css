@@ -1,0 +1,61 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;  
+}
+.container {
+  width: 80%;
+  height: 80%;
+  margin: 10%;
+  border: 3px solid #000000;
+}
+.container p {
+  margin-left: 10px;
+}
+.flex {
+  display: flex;
+  border-bottom: 3px solid #000000;  
+}
+.element {
+  width: 80px;
+  height: 80px;
+  border: 1px solid #000000;
+  text-align: center;
+  line-height: 80px;
+  margin: 10px;
+  color: #FFFFFF;
+  font-size: 2em;
+}
+.orange {
+  background-color: orange;
+}
+.green {
+  background-color: green;
+}
+.purple {
+  background-color: purple;
+}
+.toFirst {
+  order: 1;
+}
+.toLast {
+  order: 6;
+}
+@media screen and (max-width: 767px) {
+  .flex {
+    flex-direction: column;
+  }
+  .element {
+    width: calc(100% - 20px);
+  }
+  .desc {
+    flex-direction: column-reverse;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .flex {
+    flex-direction: row;
+  }
+  .desc {
+    flex-direction: row-reverse;
+  }
+}
